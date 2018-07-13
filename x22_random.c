@@ -14,6 +14,8 @@ task main()
 {
 	while(true)
 	{
+		eraseDisplay();
+		
 		for(int i = 0; i < Input_Size; i++)
 		{
 			a[i] = au_getInt();
@@ -30,6 +32,7 @@ task main()
 			k = 0;
 		}
 
+		flushButtonMessages();
 	}
-	flushButtonMessages();
+	
 }

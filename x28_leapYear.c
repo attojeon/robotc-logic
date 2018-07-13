@@ -54,6 +54,10 @@ int atoRound(float f)
 
 void ato_nextWithSonic()
 {
+	while( getUSDistance(sonic) >20 ){}
+	sleep(500);
+	while( getUSDistance(sonic) < 15 ){}
+	/*
 	while (true)
 	{
 		int nDist = atoRound(getUSDistance(sonic));
@@ -64,6 +68,7 @@ void ato_nextWithSonic()
 			page++;
 		}
 	}
+	*/
 }
 
 

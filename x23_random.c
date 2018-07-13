@@ -18,6 +18,8 @@ task main()
 {
 	while(true)
 	{
+		eraseDisplay();
+		
 		for(int i = 0; i < Input_Size; i++)
 		{
 			nDist = atoRound(getUSDistance(sonic));
@@ -36,6 +38,7 @@ task main()
 			k = 0;
 		}
 
+		flushButtonMessages();
 	}
-	flushButtonMessages();
+	
 }

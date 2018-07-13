@@ -10,6 +10,7 @@ task main()
 		sleep(1000);
 
 		waitForButtonPress(); // 1st time OK but next fail
+		flushButtonMessages(); // I dont
 	}
 
 }
