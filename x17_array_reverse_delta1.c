@@ -25,23 +25,17 @@ task main()
 {
 	setSoundVolume(10);
 	ato_init();
-	 int delta = 1;
-
+	int delta = 1;
+	int idx = 0;
 
 	while(true)
 	{
-		for(int i=1; i<TOT_IMG; i++)
+		ato_drawImgWithSnd(idx);		//after 1st cycle then index 3 error
+		if(idx == TOT_IMG-1)
 		{
-			ato_drawImgWithSnd((i-1));		//after 1st cycle then index 3 error
-			if(i == TOT_IMG-1)
-			{
-				 delta *= -1;
-			}
+				delta *= -1;
 		}
-		for(int i=1; i<TOT_IMG; i++)
-		{
-			ato_drawImgWithSnd((i-TOT_IMG)*delta); // (TOT_IMG-i)*delta)--> fail
-		}
+		idx += delta;
 	}
 
 	ato_waitForExit();
